@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de amor</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f6914d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+            transition: background-color 0.5s;
+        }
+        
+        .card {
+            width: 90%;
+            max-width: 500px;
+            background-color: rgba(246, 250, 255, 0.767);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgb(255, 34, 200);
+            padding: 30px;
+            text-align: center;
+            transition: all 0.5s;
+            position: absolute;
+            opacity: 1;
+        }
+        
+        .card.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px);
+        }
+        
+        h1 {
+            color: #ff0da2;
+            margin-bottom: 25px;
+            font-size: 60px;
+        }
+        
+        .message {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-no {
+            background-color: #e70808;
+            color: #f1f1f1;
+        }
+        
+        .btn-yes {
+            background-color: #0a922c;
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn-no:hover {
+            background-color: #e0e0e0;
+            display:flex;
+        }
+        
+        .btn-yes:hover {
+            background-color: #c0392b;
+        }
+        
+        .audio-time {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 30px;
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: #0bc705;
+            margin: 30px 0;
+        }
+        
+        .programmer-joke {
+            font-style: italic;
+            color: #555;
+            font-size: 32px;
+        }
+        
+        /* Estilos para la segunda tarjeta */
+        .response-card h1 {
+            color: #2ecc71;
+        }
+        
+        .webinar-link {
+            display: inline-block;
+            margin: 15px 0;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .webinar-link:hover {
+            text-decoration: underline;
+        }
+        
+        .happy-list {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 80%;
+        }
+         /* Estilo básico para imágenes */
+.mi-imagen {
+    width: 80px;
+    height: auto; /* Mantiene la proporción */
+    border: 3px solid #3498db;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgb(238, 20, 122);
+    transition: transform 0.3s ease;
+   text-align:color(#56c70b);
+}
+
+/* Efecto hover */
+.mi-imagen:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Estilo para figura con caption */
+.contenedor-imagen {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.contenedor-imagen img {
+    width: 70%;
+    border-radius: 8px;
+    height: 30vh;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.contenedor-imagen figcaption {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Imagen de fondo con CSS */
+.contenedor-fondo {
+    width: 100%;
+    height: 400px;
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+     
+    </style>
+</head>
+<body>
+    <!-- Primera tarjeta (declaración) -->
+    <div class="card" id="declaration-card">
+        <h1>¿Quieres ser mi enamorada?</h1>
+        
+        <p class="message">
+            Solo quería decirte algo que me guardé por un tiempo. ... Me gustas, y cada día que te veo, me gustas un poquito más❤.
+        </p>
+        
+        <div class="options">
+            <button class="btn btn-no" id="btn-no">No</button>
+            <button class="btn btn-yes" id="btn-yes">Sí</button>
+        </div>
+        
+        <p class="audio-time">¿Escuchalo Cariño?</p>
+         <img src="capture.png" alt="Descripción de la imagen" class="mi-imagen">
+        
+        <div class="divider"></div>
+        
+        <p class="programmer-joke">ROSITA MARCA</p>
+    </div>
+    
+    <!-- Segunda tarjeta (respuesta positiva) -->
+    <div class="card hidden" id="response-card">
+        <h1>!SABIA QUE ACEPTARIAS¡ 🩷🫶</h1>
+        
+        
+        <div class="happy-list">
+            <p><strong>Preparate para ser feliz conmigo<br>ya estoy en camino en un avion</strong></p>
+        </div>
+        
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen con HTML y CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Imagen con atributos básicos -->
+     <img src="avion.jpg" alt="" class="mi-imagen">
+    <img src="captura.png" alt="Descripción de la imagen" class="mi-imagen">
+    
+    <!-- Imagen con figura y caption -->
+    <figure class="contenedor-imagen">
+        <figcaption><h2>ROSITA MARCA</h2></figcaption>
+    </figure>
+         
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btnYes = document.getElementById('btn-yes');
+            const btnNo = document.getElementById('btn-no');
+            const declarationCard = document.getElementById('declaration-card');
+            const responseCard = document.getElementById('response-card');
+            
+            btnYes.addEventListener('click', function() {
+                declarationCard.classList.add('hidden');
+                setTimeout(() => {
+                    responseCard.classList.remove('hidden');
+                    document.body.style.backgroundColor = '#f0fff4';
+                }, 300);
+            });
+            
+            btnNo.addEventListener('click', function() {
+                // Animación para el botón "No"
+                btnNo.style.transform = 'translateX(-10px)';
+                setTimeout(() => {
+                    btnNo.style.transform = 'translateX(10px)';
+                }, 100);
+                setTimeout(() => {
+                    btnNo.style.transform = 'translateX(-10px)';
+                }, 200);
+                setTimeout(() => {
+                    btnNo.style.transform = 'translateX(0)';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
